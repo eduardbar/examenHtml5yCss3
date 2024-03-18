@@ -1,1 +1,201 @@
 @import url(variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ---------------------- HEADER ----------------------- */
+.title{
+    color: var(--color_primario)
+}
+body{
+    background-color: var(--color_blanco);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+.header {
+    height: var(--altura_header);
+}
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right);
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links {
+    height: calc(80vh - var(--altura_header));
+}
+
+.list_icon {
+    color: var(--color_blanco);
+    cursor: pointer;
+}
+.ul_links {
+    width: 100%;
+    position: absolute;
+    top: var(--altura_header);
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    transition: all .3s;
+}
+.link {
+    font-size: 3em;
+    color: var(--color_negro);
+    font-weight: bold;
+}
+@media (min-width:768px){
+    .labe_hamburguesa {
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .link{
+        font-size: 1.2rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+    }
+    .link:hover{
+        color: var(--color_primario);
+    }
+}
+
+/* ---------------------- FIN DEL HEADER ----------------------- */
+/* ------------------- INCIO MENU PRODUCTOS -------------------- */
+
+.parent {
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    height: 943px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 3 / 1 / 4 / 2; }
+    .div4 { grid-area: 4 / 1 / 5 / 2; }
+    .div5 { grid-area: 1 / 2 / 5 / 4; }
+    .div6 { grid-area: 1 / 4 / 5 / 7; }
+
+    .parent .div1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 233px;
+    }
+    .parent .div1 img{
+        border-radius: 5px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .parent .div2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 233px;
+}
+.parent .div2 img{
+    border-radius: 5px;
+    width: 200px;
+    height: 150px;
+}
+
+.parent .div3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 233px;
+}
+
+.parent .div3 img{
+    border-radius: 5px;
+    width: 200px;
+    height: 110px;
+}
+
+.parent .div4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 233px;
+}
+
+.parent .div4 img{
+    border-radius: 5px;
+    width: 200px;
+    height: 160px;
+}
+.parent .div5{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+}
+.parent .div6{
+    display: grid;
+    align-content: center;
+    width: 310px;
+}
+.parent .div6 button{
+    background-color: var(--color_negro);
+    color: var(--color_blanco);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+.parent .div6 button:hover{
+    background-color: var(--color_primario);
+    transition: all .3s;
+}
